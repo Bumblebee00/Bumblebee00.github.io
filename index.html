@@ -2,13 +2,23 @@
 <html>
 <head>
     <title>Mattia Micheletta Merlin - Personal Website</title>
+    <style>
+        /* Hide the image by default */
+        #my-image {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <h1>Mattia Micheletta Merlin</h1>
     
     <p>I am currently studying Phisical Engineering at Politecnico di Torino.</p>
     
-    <img src="me.jpg" alt="Io nell'ottobre 2023" width="200" height="200">
+    <!-- Add a link to show the image -->
+    <a href="#" onclick="document.getElementById('my-image').style.display = 'block'; return false;">Image of myself</a>
+    
+    <!-- Add the image with an ID -->
+    <img id="my-image" src="me.jpg" alt="Io nell'ottobre 2023" width="200" height="200">
     
     <h2>Contacts</h2>
     <ul>
@@ -16,10 +26,6 @@
         <li><a href="https://x.com/mmmattia">X</a></li>
         <li><a href="https://github.com/Bumblebee00">GitHub</a></li>
         <li>mattia.micheletta@gmail.com mattia.michelettamerlin@studenti.polito.com</li>
-    </ul>
-</body>
-</html>
-        
     </ul>
 </body>
 </html>
