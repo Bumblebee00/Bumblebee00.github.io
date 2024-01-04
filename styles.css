@@ -1,0 +1,31 @@
+body {
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+.book {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+
+a:hover {
+    color: #b30900; /* Darken link color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+::selection {
+    background: #b30900;
+    color: white;
+}
