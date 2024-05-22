@@ -4,9 +4,8 @@
     <title>Mattia Micheletta Merlin - Cronologia di lettura</title>
     <style>
         .unity-container {
-            width: 50%;
-            height: 50%;
-            border: none;
+            width: 100%;
+            border: 1px solid black;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -24,5 +23,16 @@
         <iframe src="https://michelettamattia.live/Armoniografo_WebGL_build/" class="unity-container"></iframe>
     </div>
 
+    <script>
+        window.onload = function() {
+            var unityContainer = document.querySelector('.unity-container');
+            unityContainer.style.height = getComputedStyle(unityContainer).width;
+        }
+
+        window.onresize = function() {
+            var unityContainer = document.querySelector('.unity-container');
+            unityContainer.style.height = getComputedStyle(unityContainer).width;
+        }
+    </script>
 </body>
 </html>
