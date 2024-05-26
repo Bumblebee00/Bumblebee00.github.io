@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mattia Micheletta Merlin - Visualizzatore di modi normali</title>
+    <style>
+        .date {
+            font-size: 0.8em;
+            color: #999;
+        }
+        iframe{
+            border: none;
+            /* Center horizontally */
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <span id="lang-switcher" role="img" aria-label="Switch language" onclick="switchLanguage()">🇬🇧</span>
+    <script>
+        function switchLanguage() {
+            location.href = "Modi_normali_en.html";
+        }
+    </script>
+
+    <h1>Visualizzatore di modi normali</h1>
+    <p class = "date" >Data: 26 Maggio 2024</p>
+
+    <p>I modi normali sono...</p>
+
+    <iframe src="https://michelettamattia.live/normal-modes/" width="700px" height="700px"></iframe>
+</body>
+</html>
