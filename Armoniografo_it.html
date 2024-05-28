@@ -18,6 +18,11 @@
             font-size: 0.8em;
             color: #999;
         }
+        .youtube-video-container {
+            width: 50%; /* Adjust width as needed */
+            margin: 0 auto; /* Center horizontally */
+            display: block;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -63,9 +68,14 @@
         <iframe src="https://michelettamattia.live/Armoniografo_WebGL_build/scena6d" class="unity-container"></iframe>
     </div>
     <h2 id="trasformata di fourier">Visualizzazione suono con trasformata di Fourier</h2>
-    ...
+    <p>Infine ho pensato: bè adesso che ho questo programma che mi permette di visualizzare fino a 6 frequenze, perchè non usarlo per visualizzare il suono? Così ho creato un programma che prende come input audio dal microfono o da un file .mp3, e in tempo reale fa la trasformata di Fourier per ottenere le sei frequenze più intense, e le visualizza sull'Armoniografo come una specie di filmato (Nota: non ho scritto io il codice della trasformata di Fourier, ho usato una libreria già esistente). Purtroppo però non sono riuscito a farlo funzionare su questa pagina web, perchè Unity WebGL non ha la classe microfono, qundi dovrai accontentarti di dei video.</p>
+
+    <div class="youtube-video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q-erwJ8RSm0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
     <h2 id="strumenti_informatici">Dettagli tecnici sugli strumenti informatici usati</h2>
-    Ho realizzato questo progetto con Unity, un motore grafico 3D per realizzazione di giochi, basato su C#. Per le visualizzazioni interattive in questa pagina ho buildato il progetto Unity per WebGL, e l'ho hostato su una repository di github con github pages (non questa stessa dove è hostato il sito per mantenere l'ordine).
+    <p>Ho realizzato questo progetto con Unity, un motore grafico 3D per realizzazione di giochi, basato su C#. Per le visualizzazioni interattive in questa pagina ho buildato il progetto Unity per WebGL, e l'ho hostato su una repository di github con github pages (non questa stessa dove è hostato il sito per mantenere l'ordine). Di tutte le possibili calssi Unity ha deciso di non sviluppare proprio quella del microfono per WebGL, quindi non ho potuto implementare la visualizzazione del suono in tempo reale, mi spiace.</p>
     <p>Ho incontrato una sfida interessante passando da 3 a 6 dimensioni: infatti per disegnare la traccia tridimensionale usavo un component di unity chiamato LineRenderer che permette di visualizzare una linea che passa per dei punti specificati dal codice. A questo LineRenderer è assegnato un gradiente di colore che definisce il colore della linea, ma purtroppo questo gradiente può avere solamente otto colori. La soluzione che ho adottato è stata di creare moltissimi LineRenderer diversi e attaccarli l'uno all'altro, per permettere una linea lunghissima con tantissimi colori sopra.</p>
 </body>
 </html>

@@ -18,6 +18,11 @@
             font-size: 0.8em;
             color: #999;
         }
+        .youtube-video-container {
+            width: 50%; /* Adjust width as needed */
+            margin: 0 auto; /* Center horizontally */
+            display: block;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -62,10 +67,16 @@
     <div class="unity-container">
         <iframe src="https://michelettamattia.live/Armoniografo_WebGL_build/scena6d" class="unity-container"></iframe>
     </div>
+
     <h2 id="fourier-transform">Sound Visualization with Fourier Transform</h2>
-    ...
+    <p>Finally, I thought: well, now that I have this program that allows me to visualize up to 6 frequencies, why not use it to visualize sound? So, I created a program that takes audio input from the microphone or from an .mp3 file and, in real-time, performs the Fourier transform to obtain the six most intense frequencies, and displays them on the Armoniografo like a kind of video (Note: I didn't write the Fourier transform code myself; I used an existing library). Unfortunately, I couldn't get it to work on this web page because Unity WebGL doesn't have the microphone class, so you'll have to settle for videos.</p>
+
+    <div class="youtube-video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q-erwJ8RSm0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
     <h2 id="technical-details">Technical Details of the Used Tools</h2>
-    I created this project with Unity, a 3D game engine based on C#. For the interactive visualizations on this web page, I built the Unity project for WebGL and hosted it on a GitHub repository with GitHub Pages (not the same repository where this website is hosted to maintain order).
+    <p>I created this project with Unity, a 3D graphics engine for game development, based on C#. For the interactive visualizations on this page, I built the Unity project for WebGL, and hosted it on a GitHub repository with GitHub Pages (not the same one where the site is hosted to keep things organized). Out of all the possible classes, Unity decided not to develop the microphone class for WebGL, so I couldn't implement real-time sound visualization, I'm sorry.</p>
     <p>I encountered an interesting challenge when going from 3 to 6 dimensions: to draw the three-dimensional trace, I used a Unity component called LineRenderer, which allows visualizing a line passing through points specified in the code. This LineRenderer is assigned a color gradient that defines the color of the line, but unfortunately, this gradient can only have eight colors. The solution I adopted was to create many different LineRenderers and attach them to each other to allow for a very long line with many colors on top.</p>
 </body>
 </html>
