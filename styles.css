@@ -47,19 +47,7 @@ a:hover {
     color: white;
 }
 
-.image-container {
-    width: 50%;
-    margin: auto;
-  }
-  
-  img {
-    border-radius: 15px;
-    margin: 10px;
-    width: 100%;
-    object-fit: cover;
-    transition: transform .2s; /* Animation */
-  }
-  
-  img:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+.date {
+    font-size: 0.8em;
+    color: #999;
+}
