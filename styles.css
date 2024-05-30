@@ -18,7 +18,7 @@ a {
 #lang-switcher {
     position: fixed;
     top: 10px;
-    right: 10px;
+    left: 10px;
     cursor: pointer;
 }
 
