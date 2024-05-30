@@ -12,13 +12,6 @@
             location.href = "index_it.html";
         }
     </script>
-    <script>
-        fetch('update_counter.php')
-            .then(response => response.text())
-            .then(data => console.log(data))
-            .catch((error) => console.error('Error:', error));
-    </script>
-    <span id="visit-count"></span> <!-- Add this line -->
 
     <h1>Mattia Micheletta Merlin</h1>
     
@@ -45,15 +38,5 @@
     <li><a href="https://www.strava.com/athletes/101457348">Strava</a></li>
     <li>Personal Email: <a href="mailto: micheletta.mattia@gmail.com">micheletta.mattia@gmail.com</a></li>
     <li>University Email: <a href="mailto: mattia.michelettamerlin@studenti.polito.com">mattia.michelettamerlin@studenti.polito.com</a></li>
-
-    <script>
-        // Update visit count
-        fetch('visit_count.php')
-            .then(response => response.text())
-            .then(count => {
-                document.getElementById('visit-count').textContent = `Visited ${count} times`;
-            })
-            .catch((error) => console.error('Error:', error));
-    </script>
 </body>
 </html>
