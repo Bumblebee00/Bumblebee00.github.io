@@ -12,6 +12,12 @@
             location.href = "index_it.html";
         }
     </script>
+    <script>
+        fetch('update_counter.php')
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch((error) => console.error('Error:', error));
+        </script>
 
     <h1>Mattia Micheletta Merlin</h1>
     
