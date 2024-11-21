@@ -51,19 +51,19 @@
     <p>con \(A_x, A_y, \omega_x, \omega_y, \phi_x, \phi_y\) parametri reali che definiscono la figura.</p>
     <p>Il marchingegno in questione è composto da un tavolino quadrato con attaccati a due lati perpendicolari due pendoli di lunghezza variablie, ciascuno di essi controlla la posizione di una matita lungo un solo asse. Sul tavolino infine c'é un foglio di carta su cui la matita può disegnare. Purtroppo essendo questo aggeggio nel mondo reale, è soggetto a forze di attrito quindi in tutti i disegni fatti le curve andavano a chiudersi su loro stesse. Così mi è venuuto in mente di creare una simulazione al computer di un Armoniografo perfetto senza attrito, e così ho fatto:</p>
     <div class="unity-container">
-        <iframe src="https://michelettamattia.live/Armoniografo_WebGL_build/scena2d/" class="unity-container"></iframe>
+        <iframe src="https://mmm3.it/Armoniografo_WebGL_build/scena2d/" class="unity-container"></iframe>
     </div>
     <p>In questa pagina web puoi utilizzare il programma che ho realizzato e disegnare delle figure di Lissajous, nota che schiacciando il pulsante stop e poi start puoi pulire il folgio dalle figure appena disegnate. Puoi cambiare le frequenze di oscillazione \( \omega_x, \omega_y \), per semplicità ho fissato \( A_x = A_y = 1 \) e \( \phi_x = \phi_y = 0 \). Inoltre ho aggiunto anche la possibilità di simulare l'attrito, infatti il parametro "Damping time" regola in quanti secondi il sistema si ferma.</p>
 
     <h2 id="generalizzazione">Generalizzazione a più dimensioni</h2>
     <p>Successivamente mi sono reso conto che, non essendo limitato dalla mia abilità meccanica, potevo generalizzare il concetto di Armoniografo a più dimensioni. E così ho fatto un armoniografo tridimensionale:</p>
     <div class="unity-container">
-        <iframe src="https://michelettamattia.live/Armoniografo_WebGL_build/scena3d" class="unity-container"></iframe>
+        <iframe src="https://mmm3.it/Armoniografo_WebGL_build/scena3d" class="unity-container"></iframe>
     </div>
     <p>Come nella scena precedente si può fermare e far ripartire l'Armoniografo, modificare le sue frequenze sui tre assi, e se non si ha voglia di aspettare che il disegno si chiuda su se stesso si può usare il pulsante "Complete Drawing"</p>
     <p>Successivamente ho aggiunto altre tre "cose" oscillanti, ovvero i canali rgb del colore della linea. Modificando i valori delle frequenze R, G, B vedrete come cambiano i colori del disegno, consiglio di premere in sequenza i pulsanti "Randomize Frequencies" e "Complete Drawing" per osservare tanti pattern diversi.</p>
     <div class="unity-container">
-        <iframe src="https://michelettamattia.live/Armoniografo_WebGL_build/scena6d" class="unity-container"></iframe>
+        <iframe src="https://mmm3.it/Armoniografo_WebGL_build/scena6d" class="unity-container"></iframe>
     </div>
     <h2 id="trasformata di fourier">Visualizzazione suono con trasformata di Fourier</h2>
     <p>Infine ho pensato: bè adesso che ho questo programma che mi permette di visualizzare fino a 6 frequenze, perchè non usarlo per visualizzare il suono? Così ho creato un programma che prende come input audio dal microfono o da un file .mp3, e in tempo reale fa la trasformata di Fourier per ottenere le sei frequenze più intense, e le visualizza sull'Armoniografo come una specie di filmato (Nota: non ho scritto io il codice della trasformata di Fourier, ho usato una libreria già esistente). Purtroppo però non sono riuscito a farlo funzionare su questa pagina web, perchè Unity WebGL non ha la classe microfono, qundi dovrai accontentarti di dei video.</p>
