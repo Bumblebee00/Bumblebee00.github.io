@@ -37,7 +37,7 @@
     Now, let’s study the normal modes of some simple systems: we start with two pendulums connected by a spring. The generalized coordinates of this system are the two angles of the pendulums with respect to the vertical, which we will call \( \theta \) and \( \phi \). The Cartesian graph below is the configuration space with \( \theta \) in red on the horizontal axis and \( \phi \) in green on the vertical axis; a point in this space represents a state of the system. Use the simulation below, changing the initial conditions with the sliders or text fields (then press start to begin and stop to pause): you’ll see that neither pendulum oscillates with a perfect sine wave because it is being pulled by the spring.
     <br>
     <br>
-    <iframe src="https://michelettamattia.live/normal-modes/no_projection2D.html" width="700px" height="700px"></iframe>
+    <iframe src="mmm3.it/normal-modes/no_projection2D.html" width="700px" height="700px"></iframe>
     <br>
     Now, let’s find the normal modes: an equilibrium point of the system is when both pendulums are in the vertical position, i.e., \( \theta = \phi = 0 \), which is the origin of the configuration space (the rest length of the spring is the distance between the two pendulums in this position). At this stable equilibrium point, the potential can be approximated by a paraboloid (using a second-order Taylor expansion); here is the analytical expression, just out of curiosity:
     $$ V(\theta, \phi) = \frac{1}{2}(m_1gl + kl^2)\theta^2 + \frac{1}{2}(m_2gl + kl^2)\phi^2 - kl^2\theta\phi $$
@@ -51,7 +51,7 @@
     $$ \omega_1^2 = \frac{g}{l} , \quad \omega_2^2 = \frac{g}{l} + \frac{k}{m_1 || m_2} $$
     <br>
     <br>
-    <iframe src="https://michelettamattia.live/normal-modes/" width="700px" height="700px"></iframe>
+    <iframe src="mmm3.it/normal-modes/" width="700px" height="700px"></iframe>
     <br>
     Now let’s consider a system with three degrees of freedom: three beads (of equal mass \( m \)) that can move along guides positioned in a triangle, connected by three springs (with equal spring constant \( k \) and rest length \( l \)) as shown in the figure. Note how the configuration space is now three-dimensional (each axis is the distance of a bead from the center). Performing calculations similar to before, i.e., expanding the potential around the equilibrium point with Taylor expansion, we find the three eigenvectors that represent the three normal modes of the system. These are:
     $$ \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix}, \begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix}, \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix} $$
@@ -60,13 +60,13 @@
     In the following simulations, you can see the three normal modes one at a time and then a linear combination of them.
     <br>
     <br>
-    <iframe src="https://michelettamattia.live/normal-modes/index3D_m1.html" width="700px" height="700px"></iframe><br>
+    <iframe src="mmm3.it/normal-modes/index3D_m1.html" width="700px" height="700px"></iframe><br>
     <br>
-    <iframe src="https://michelettamattia.live/normal-modes/index3D_m2.html" width="700px" height="700px"></iframe><br>
+    <iframe src="mmm3.it/normal-modes/index3D_m2.html" width="700px" height="700px"></iframe><br>
     <br>
-    <iframe src="https://michelettamattia.live/normal-modes/index3D_m3.html" width="700px" height="700px"></iframe>
+    <iframe src="mmm3.it/normal-modes/index3D_m3.html" width="700px" height="700px"></iframe>
     <br>
-    <iframe src="https://michelettamattia.live/normal-modes/index3D.html" width="700px" height="700px"></iframe>
+    <iframe src="mmm3.it/normal-modes/index3D.html" width="700px" height="700px"></iframe>
     <br>
     <br>
     Unfortunately, I was unable to create an interactive simulation for this 3D system, i.e., one where the system evolves from chosen initial conditions. I couldn’t do it because I was unable to solve the equations I’ve shown below:
