@@ -23,21 +23,21 @@
         }
     </script>
 
-<script>
-    function adjustZoom() {
-        let screenWidth = window.innerWidth;
-        let screenHeight = window.innerHeight;
-        let zoomX = screenWidth / 500;  // Scale based on width
-        let zoomY = screenHeight / 500; // Scale based on height
-        let zoomLevel = Math.min(zoomX, zoomY); // Maintain aspect ratio
+    <script>
+        function adjustZoom() {
+            let screenWidth = window.innerWidth;
+            let screenHeight = window.innerHeight;
+            let zoomX = screenWidth / 500;  // Scale based on width
+            let zoomY = screenHeight / 500; // Scale based on height
+            let zoomLevel = Math.min(zoomX, zoomY); // Maintain aspect ratio
 
-        document.body.style.zoom = zoomLevel * 100 + "%";
-    }
+            document.body.style.zoom = zoomLevel * 100 + "%";
+        }
 
-    // Adjust zoom on page load and window resize
-    adjustZoom();
-    window.addEventListener("resize", adjustZoom);
-</script>
+        // Adjust zoom on page load and window resize
+        adjustZoom();
+        window.addEventListener("resize", adjustZoom);
+    </script>
 
 <h1>Automatic Doodler</h1>
 
