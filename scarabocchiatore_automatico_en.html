@@ -23,22 +23,6 @@
         }
     </script>
 
-    <script>
-        function adjustZoom() {
-            let screenWidth = window.innerWidth;
-            let screenHeight = window.innerHeight;
-            let zoomX = screenWidth / 500;  // Scale based on width
-            let zoomY = screenHeight / 500; // Scale based on height
-            let zoomLevel = Math.min(zoomX, zoomY); // Maintain aspect ratio
-
-            document.body.style.zoom = zoomLevel * 100 + "%";
-        }
-
-        // Adjust zoom on page load and window resize
-        adjustZoom();
-        window.addEventListener("resize", adjustZoom);
-    </script>
-
 <h1>Automatic Doodler</h1>
 
 <p class="date"> Author: <a href="index.html">Mattia Micheletta Merlin</a>; Date: Feb 7 2025</p>
