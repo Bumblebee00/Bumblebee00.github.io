@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>???</title>
+    <style>
+        .date {
+            font-size: 0.8em;
+            color: #999;
+        }
+        iframe{
+            border: none;
+            /* Center horizontally */
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="imgs/icon.jpg">
+    
+</head>
+<body>
+    <span id="lang-switcher" role="img" aria-label="Switch language" onclick="switchLanguage()">🇮🇹</span>
+    <script>
+        function switchLanguage() {
+            location.href = "gsoc_it.html";
+        }
+    </script>
+
+    <h1>SymbolicIntegration.jl (my GSoC project)</h1>
+    <p class="date"> Author: <a href="index.html">Mattia Micheletta Merlin</a>; Date: 20/07/2025</p>
+    
+    Google summer of code is a summer program in which students around the workd get paid to contribute to open source projects. Summer 2025 I am partecipating, building a symbolic integrator (a program that does indefinite integrals, finds primitives) for the Julia language. (<a href="https://github.com/Bumblebee00/SymbolicIntegration.jl">github repo</a>) This program works by applying integration rules on the integrand based on it's form. I didn't write the rules myself but I am taking them from a Mathematica package called <a href="https://rulebasedintegration.org/">Rubi</a>.
+    I am halfway trough my working period, here are some stats:
+    <li>158 commits</li>
+    <li>1232 terminal commands executed</li>
+    <li>164 times i executed the script to transalte rules files</li>
+    <li>I transalted 18 rules files</li>
+    Here are the dates of commands on my terminal plotted:
+    <br>
+    <img src="imgs/command_timeline.png">
+</body>
+</html>
